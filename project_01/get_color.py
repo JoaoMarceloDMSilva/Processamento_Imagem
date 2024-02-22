@@ -1,3 +1,5 @@
+# Origem => https://github.com/offsouza/color-segmentation
+
 import cv2
 import numpy as np
 import argparse
