@@ -42,5 +42,4 @@ while True:
     elif key == 27:  # Tecla 'ESC' para fechar a janela
         break
 
-# Libera os recursos
 cv2.destroyAllWindows()
