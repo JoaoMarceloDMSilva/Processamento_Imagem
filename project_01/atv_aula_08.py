@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread('images/noise.jpg')
+img = cv2.imread('images/woman_and_crow.jpg')
 
 ksize=7
 

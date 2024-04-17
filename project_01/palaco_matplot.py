@@ -1,5 +1,6 @@
 import numpy as np
 import cv2
+import matplotlib.pyplot as plt
 
 img = cv2.imread('images/clown.jpg',0)
 
@@ -37,11 +38,15 @@ img_filtered = np.abs(3*img_filtered).clip(0,255).astype(np.uint8)
 
 resized_image_filtred = cv2.resize(img_filtered, (new_width, new_height))
 
+plt.figure(figsize=(10, 5))
+plt.subplot(1, 3, 1), plt.imshow(resized_image, cmap='gray')
+plt.title('Imagem'), plt.xticks([]), plt.yticks([])
+plt.subplot(1, 3, 2), plt.imshow(magnitude_spectrum, cmap='gray')
+plt.title('Espectro'), plt.xticks([]), plt.yticks([])
+plt.subplot(1, 3, 3), plt.imshow(mask, cmap='gray')
+plt.title('Máscara'), plt.xticks([]), plt.yticks([])
+plt.show()
 
-cv2.imshow("Imagem", resized_image)
-cv2.imshow("Espectro", magnitude_spectrum)
-cv2.imshow("Mascara", mask)
-cv2.imshow("Resultado", resized_image_filtred)
-
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+plt.imshow(resized_image_filtred, cmap='gray')
+plt.title('Resultado'), plt.xticks([]), plt.yticks([])
+plt.show()
