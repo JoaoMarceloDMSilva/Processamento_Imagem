@@ -43,7 +43,7 @@ erosion_resized = resize_image(step_1_erosion, scale_percent)
 dilate_resized = resize_image(dilation, scale_percent)
 cv2.imshow("Imagem", img_resized)
 cv2.imshow("Erosion", erosion_resized)
-cv2.imshow("Dilated", dilate_resized)
+cv2.imshow("Dilated - Imagem 2 (Mais perto)", dilate_resized)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
